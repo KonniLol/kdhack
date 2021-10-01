@@ -9,76 +9,19 @@
     <link rel="stylesheet" type="text/css" href="./css/main.css" media="screen" />
 </head>
 <body>
-    <header id="nav-wrapper">
-        <nav id="nav">
-            <div class="nav left">
-                <span class="gradient skew"><h1 class="logo un-skew"><a href="#home">Logo Here</a></h1></span>
-                <button id="menu" class="btn-nav"><span class="fas fa-bars"></span></button>
-            </div>
-            <div class="nav right">
-                <a href="#home" class="nav-link active"><span class="nav-link-span"><span class="u-nav">Home</span></span></a>
-                <a href="#about" class="nav-link"><span class="nav-link-span"><span class="u-nav">About</span></span></a>
-                <a href="#work" class="nav-link"><span class="nav-link-span"><span class="u-nav">Work</span></span></a>
-                <a href="#contact" class="nav-link"><span class="nav-link-span"><span class="u-nav">Contact</span></span></a>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-
-        </section>
-        <section id="about">
-
-        </section>
-        <section id="work">
-
-        </section>
-        <section id="contact">
-
-        </section>
-    </main>
 
     <div>
+        <form action="POST">
+            known parent <br>
+            <input type="radio" id="female" name="parent" value="FEMALE">
+            <label for="female">FEMALE</label><br>
+            <input type="radio" id="male" name="parent" value="MALE">
+            <label for="male">MALE</label><br>
 
+        </form>
     </div>
 
-    <script type="text/javascript">
-        var util = {
-            mobileMenu() {
-                $("#nav").toggleClass("nav-visible");
-            },
-            windowResize() {
-                if ($(window).width() > 800) {
-                    $("#nav").removeClass("nav-visible");
-                }
-            },
-            scrollEvent() {
-                var scrollPosition = $(document).scrollTop();
-
-                $.each(util.scrollMenuIds, function(i) {
-                    var link = util.scrollMenuIds[i],
-                        container = $(link).attr("href"),
-                        containerOffset = $(container).offset().top,
-                        containerHeight = $(container).outerHeight(),
-                        containerBottom = containerOffset + containerHeight;
-
-                    if (scrollPosition < containerBottom - 20 && scrollPosition >= containerOffset - 20) {
-                        $(link).addClass("active");
-                    } else {
-                        $(link).removeClass("active");
-                    }
-                });
-            }
-        };
-
-        $(document).ready(function() {
-
-            util.scrollMenuIds = $("a.nav-link[href]");
-            $("#menu").click(util.mobileMenu);
-            $(window).resize(util.windowResize);
-            $(document).scroll(util.scrollEvent);
-
-        });
-    </script>
 </body>
 </html>
+
+вес рост цвет дрессировка
